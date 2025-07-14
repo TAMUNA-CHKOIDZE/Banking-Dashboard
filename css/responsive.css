@@ -1,0 +1,242 @@
+/* 1024px ----------------------- */
+@media (max-width:1024px) {
+
+    /* main  */
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-areas: "accounts"
+            "expenses "
+            "transactions";
+    }
+
+    /* transactions history */
+    .transactions-summary {
+        flex-wrap: wrap;
+    }
+
+    .summary-card {
+        flex: 1 1 40%;
+    }
+
+    .transactions-table thead th:first-child,
+    .transactions-table thead th:nth-child(4),
+    .transactions-table thead th:nth-child(6),
+    .transactions-table thead th:nth-child(7) {
+        display: none;
+    }
+
+    .transactions-table tbody td:first-child,
+    .transactions-table tbody td:nth-child(4),
+    .transactions-table tbody td:nth-child(6),
+    .transactions-table tbody td:nth-child(7) {
+        display: none;
+    }
+}
+
+/* 680px --------------------- */
+@media (max-width: 680px) {
+
+    /* header */
+    .header__menu-text,
+    .header__action-button,
+    .header__logout-button,
+    .accounts__hide {
+        display: none;
+    }
+
+    .header__aside-search,
+    .header__aside-controls {
+        display: block;
+    }
+
+    .header__aside {
+        padding: 90px 20px 0 20px;
+    }
+
+    .navigation__list {
+        gap: 8px;
+    }
+
+    .header__menu {
+        width: 22px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cash-flow__chart {
+        display: none;
+    }
+
+    .expenses__progress {
+        display: block;
+    }
+
+    .expenses__progress {
+        margin-top: 16px;
+    }
+
+    .expenses__progress-bar {
+        width: 100%;
+        height: 12px;
+        background-color: #eee;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 8px;
+    }
+
+    .expenses__progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #FE4A8B, #22D6B7);
+        width: 0%;
+        transition: width 0.4s ease;
+    }
+
+    .expenses__progress-label {
+        font-size: 12px;
+        color: #300942;
+        font-weight: 500;
+    }
+
+    /* main  */
+    .accounts__list {
+        grid-template-columns: 1fr;
+    }
+
+    /* transactions history */
+    .transactions-header {
+        flex-direction: column;
+    }
+
+    .date-range-single {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+
+    .summary-card {
+        flex: 1 1 30%;
+    }
+
+    .transactions-table,
+    .filter-tabs {
+        display: none;
+    }
+
+    .transactions__mobile,
+    .filter-tabs-mobile {
+        display: block;
+    }
+
+    .ellipsis-btn {
+        display: block;
+        background: none;
+        border: none;
+        padding: 6px;
+        cursor: pointer;
+        color: #B206A9;
+    }
+
+    .ellipsis-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    #status-select {
+        width: 40px;
+    }
+
+    .transactions__mobile-row {
+        padding: 12px 16px;
+        background: #ffffff;
+        border-top: 1px solid #ede7f3;
+    }
+
+    .row__date {
+        margin-bottom: 16px;
+    }
+
+    .row__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .row__avatar-box {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .row__avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+}
+
+/* 480px ------------------------- */
+@media (max-width: 480px) {
+
+    /* header */
+    .header__logo img {
+        height: 60px;
+    }
+
+    .header {
+        padding-inline: 16px;
+    }
+
+    /* maun  */
+    .dashboard {
+        padding-inline: 8px;
+        margin-block: 90.4px 24px;
+    }
+
+    .dashboard section {
+        padding: 16px;
+    }
+
+
+    .transactions__all-btn {
+        width: 100%;
+    }
+
+    .transactions__icon img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .transactions__date {
+        margin-bottom: 24px;
+    }
+
+    .transactions__item {
+        padding-block: 10px;
+    }
+
+    .accounts__title,
+    .expenses__title,
+    .transactions__date {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .accounts__total {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .expenses__amount {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    /* transactions history  */
+    .transactions-history {
+        width: min(100%, 1312px);
+        padding-inline: 8px;
+        margin-block: 90.4px 24px;
+    }
+}
