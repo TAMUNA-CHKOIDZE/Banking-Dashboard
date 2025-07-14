@@ -13,7 +13,346 @@
 </head>
 
 <body>
+    <!-- header -->
+    <header class="header">
+        <div class="header__content">
+            <!-- Hidden checkbox -->
+            <input type="checkbox" id="menu-toggle" class="header__menu-toggle" hidden>
+            <!-- Label acting as menu toggle button -->
+            <label for="menu-toggle" class="header__menu">
+                <i class="fa-solid fa-bars menu-icon menu-icon--open"> <span class="header__menu-text">MENU</span></i>
+                <i class="fa-solid fa-xmark menu-icon menu-icon--close"></i>
+            </label>
+            <!-- კლიკზე გამოსაჩენი მენიუ  -->
+            <aside class="header__aside">
+                <div class="header__aside-search">
+                    <div class="search-box">
+                        <i class="search-box__icon fas fa-search"></i>
+                        <input class="search-box__input" type="text" placeholder="Search..." />
+                    </div>
+                </div>
 
+                <nav class="header__aside-navigation navigation">
+                    <h6 class="navigation__title">Menu</h6>
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a href="./index.html" class="navigation__link navigation__link--active">
+                                <i class="navigation__icon fa-solid fa-house-user"></i>
+                                <span class="navigation__text">Home</span>
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="./transactions.html" class="navigation__link">
+                                <i class="navigation__icon fa-solid fa-money-bill-transfer"></i>
+                                <span class="navigation__text">Transactions</span>
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">
+                                <i class="navigation__icon fa-solid fa-credit-card"></i>
+                                <span class="navigation__text">Payments</span>
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">
+                                <i class="navigation__icon fa-solid fa-piggy-bank"></i>
+                                <span class="navigation__text">Deposits</span>
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">
+                                <i class="navigation__icon fa-solid fa-money-check-dollar"></i>
+                                <span class="navigation__text">Credits</span>
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">
+                                <i class="navigation__icon fa-solid fa-tags"></i>
+                                <span class="navigation__text">Offers</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header__aside-controls">
+                    <div class="notification">
+                        <button class="notification__button" aria-label="Notifications">
+                            <i class="notification__icon fa-solid fa-bell"></i>
+                        </button>
+                        <span class="notification__text">Notification</span>
+                    </div>
+
+                    <div class="theme-toggle">
+                        <button class="theme-toggle__button theme-toggle__button--active" data-mode="light">
+                            <i class="theme-toggle__icon fas fa-sun"></i>
+                            <span class="theme-toggle__text">Light</span>
+                        </button>
+                        <button class="theme-toggle__button" data-mode="dark">
+                            <i class="theme-toggle__icon fas fa-moon"></i>
+                            <span class="theme-toggle__text">Dark</span>
+                        </button>
+                    </div>
+
+                    <div class="logout">
+                        <button class="logout__button">
+                            <i class="logout__icon fa-solid fa-right-from-bracket"></i>
+                        </button>
+                        <span class="logout__text">LogOut</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- logo  -->
+            <a href="./index.html" class="header__logo">
+                <img src="./images/logo.svg" alt="bank logo">
+            </a>
+            <!-- actions  -->
+            <div class="header__actions">
+                <button class="header__action-button" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="header__action-button" aria-label="Notifications">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+                <button class="header__action-button" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <div class="header__profile">
+                    <button class="header__profile-button" aria-label="User Profile">T</button>
+                </div>
+                <button class="header__logout-button">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- dashboard -->
+    <main class="dashboard">
+        <!-- accounts -->
+        <section class="dashboard__accounts accounts">
+            <div class="accounts__header">
+                <div>
+                    <h4 class="accounts__title">Total balance</h4>
+                    <span class="accounts__total">$18,653.84</span>
+                </div>
+                <div class="accounts__hide-balance">
+                    <i class="fa-solid fa-eye-slash"></i>
+                    <span class="accounts__hide">Hide balanace</span>
+                </div>
+            </div>
+
+            <div class="accounts__list">
+                <!-- Visa ბარათი -->
+                <div class="accounts__card card card--visa">
+                    <div class="card__top">
+                        <img src="./images/Visa-icon.svg" alt="viza icon">
+                        <span class="card__number">**8703</span>
+                    </div>
+                    <div class="card__info">
+                        <h5 class="card__type">Debit card</h5>
+                        <span class="card__balance">$11,092.37</span>
+                    </div>
+                    <div class="card__expiry">12/34</div>
+                </div>
+                <!-- Credit ბარათი -->
+                <div class="accounts__card card card--credit">
+                    <div class="card__top">
+                        <img src="./images/Mastercard-icon.svg" alt="Mastercard icon">
+                        <span class="card__number">**0952</span>
+                    </div>
+                    <div class="card__info">
+                        <h5 class="card__type">Credit card</h5>
+                        <span class="card__balance">$7,561.47</span>
+                    </div>
+                    <div class="card__expiry">06/32</div>
+                </div>
+                <!-- Add card -->
+                <div class="accounts__card card card--add">
+                    <button class="card__add-button">
+                        <i class="card__add-icon fa-solid fa-plus"></i>
+                    </button>
+                    <h5 class="card__add-text">Add card</h5>
+                </div>
+            </div>
+        </section>
+        <!-- expenses -->
+        <section class="dashboard__expenses expenses">
+            <div class="expenses__header">
+                <h4 class="expenses__title">July Expenses</h4>
+                <span class="expenses__amount">$54,000.00</span>
+            </div>
+            <div class="cash-flow">
+                <div class="cash-flow__chart">
+                    <div class="cash-flow__y-axis">
+                        <span>60k</span>
+                        <span>50k</span>
+                        <span>40k</span>
+                        <span>30k</span>
+                        <span>20k</span>
+                        <span>10k</span>
+                        <span>0k</span>
+                    </div>
+                    <div class="cash-flow__bars">
+                        <div class="cash-flow__bar cash-flow__bar--45">
+                            <div class="cash-flow__bar-value"></div>
+                            <span class="cash-flow__bar-label">Jan</span>
+                        </div>
+                        <div class="cash-flow__bar cash-flow__bar--30">
+                            <div class="cash-flow__bar-value"></div>
+                            <span class="cash-flow__bar-label">Feb</span>
+                        </div>
+                        <div class="cash-flow__bar cash-flow__bar--40">
+                            <div class="cash-flow__bar-value"></div>
+                            <span class="cash-flow__bar-label">Mar</span>
+                        </div>
+                        <div class="cash-flow__bar cash-flow__bar--42">
+                            <div class="cash-flow__bar-value"></div>
+                            <span class="cash-flow__bar-label">Apr</span>
+                        </div>
+                        <div class="cash-flow__bar cash-flow__bar--20">
+                            <div class="cash-flow__bar-value"></div>
+                            <span class="cash-flow__bar-label">May</span>
+                        </div>
+                        <div class="cash-flow__bar cash-flow__bar--42">
+                            <div class="cash-flow__bar-value"></div>
+                            <span class="cash-flow__bar-label">Jun</span>
+                        </div>
+                        <div class="cash-flow__bar cash-flow__bar--88 cash-flow__bar--active">
+                            <div class="cash-flow__tooltip">$54k</div>
+                            <div class="cash-flow__bar-value"></div>
+                            <span class="cash-flow__bar-label">Jul</span>
+                        </div>
+                        <div class="cash-flow__bar cash-flow__bar--50">
+                            <div class="cash-flow__bar-value"></div>
+                            <span class="cash-flow__bar-label">Aug</span>
+                        </div>
+                        <div class="cash-flow__bar cash-flow__bar--60">
+                            <div class="cash-flow__bar-value"></div>
+                            <span class="cash-flow__bar-label">Sep</span>
+                        </div>
+                        <div class="cash-flow__bar cash-flow__bar--58">
+                            <div class="cash-flow__bar-value"></div>
+                            <span class="cash-flow__bar-label">Oct</span>
+                        </div>
+                        <div class="cash-flow__bar cash-flow__bar--52">
+                            <div class="cash-flow__bar-value"></div>
+                            <span class="cash-flow__bar-label">Nov</span>
+                        </div>
+                        <div class="cash-flow__bar cash-flow__bar--59">
+                            <div class="cash-flow__bar-value"></div>
+                            <span class="cash-flow__bar-label">Dec</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="expenses__progress">
+                <div class="expenses__progress-bar">
+                    <div class="expenses__progress-fill" style="width: 88%;"></div>
+                </div>
+                <span class="expenses__progress-label">July Expenses - 88% of monthly budget</span>
+            </div>
+        </section>
+        <!-- transactions -->
+        <section class="dashboard__transactions transactions">
+            <div class="transactions__group">
+
+                <h3 class="transactions__date">Today tansaction, 17 July</h3>
+
+                <div class="transactions__item">
+                    <div class="transactions__icon">
+                        <img src="./images/nike.jpg" alt="Nike Store" />
+                    </div>
+                    <div class="transactions__details">
+                        <p class="transactions__name">Nike Store</p>
+                        <span class="transactions__type">Purchase</span>
+                    </div>
+                    <div class="transactions__info">
+                        <span class="transactions__amount transactions__amount--negative">-$28.60</span>
+                        <span class="transactions__time">11:45 AM</span>
+                    </div>
+                </div>
+
+                <div class="transactions__item">
+                    <div class="transactions__icon">
+                        <img src="./images/mom.jpg" alt="Mom" />
+                    </div>
+                    <div class="transactions__details">
+                        <p class="transactions__name">Mom</p>
+                        <span class="transactions__type">Replenishment</span>
+                    </div>
+                    <div class="transactions__info">
+                        <span class="transactions__amount transactions__amount--positive">+$100.60</span>
+                        <span class="transactions__time">9:21 AM</span>
+                    </div>
+                </div>
+
+                <div class="transactions__item">
+                    <div class="transactions__icon">
+                        <img src="./images/auchan.svg" alt="Auchan" />
+                    </div>
+                    <div class="transactions__details">
+                        <p class="transactions__name">Auchan</p>
+                        <span class="transactions__type">Purchase</span>
+                    </div>
+                    <div class="transactions__info">
+                        <span class="transactions__amount transactions__amount--negative">-$18.13</span>
+                        <span class="transactions__time">1:12 AM</span>
+                    </div>
+                </div>
+
+                <div class="transactions__item">
+                    <div class="transactions__icon">
+                        <img src="./images/total.webp" alt="Total" />
+                    </div>
+                    <div class="transactions__details">
+                        <p class="transactions__name">Total</p>
+                        <span class="transactions__type">Purchase</span>
+                    </div>
+                    <div class="transactions__info">
+                        <span class="transactions__amount transactions__amount--negative">-$15.13</span>
+                        <span class="transactions__time">10:44 AM</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transactions__group">
+                <h3 class="transactions__date">Yesterday, 16 July</h3>
+
+                <div class="transactions__item">
+                    <div class="transactions__icon">
+                        <img src="./images/auchan.svg" alt="Auchan" />
+                    </div>
+                    <div class="transactions__details">
+                        <p class="transactions__name">Auchan</p>
+                        <span class="transactions__type">Purchase</span>
+                    </div>
+                    <div class="transactions__info">
+                        <span class="transactions__amount transactions__amount--negative">-$23.75</span>
+                        <span class="transactions__time">5:45 AM</span>
+                    </div>
+                </div>
+
+                <div class="transactions__item">
+                    <div class="transactions__icon">
+                        <img src="./images/apple.png" alt="Apple Store" />
+                    </div>
+                    <div class="transactions__details">
+                        <p class="transactions__name">Apple Store</p>
+                        <span class="transactions__type">Purchase</span>
+                    </div>
+                    <div class="transactions__info">
+                        <span class="transactions__amount transactions__amount--negative">-$999.00</span>
+                        <span class="transactions__time">6:17 AM</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transactions__footer">
+                <a href="./transactions.html" class="transactions__all-btn">All transaction</a>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

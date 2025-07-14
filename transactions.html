@@ -13,7 +13,515 @@
 </head>
 
 <body>
+    <!-- header -->
+    <header class="header">
+        <div class="header__content">
+            <!-- Hidden checkbox -->
+            <input type="checkbox" id="menu-toggle" class="header__menu-toggle" hidden>
+            <!-- Label acting as menu toggle button -->
+            <label for="menu-toggle" class="header__menu">
+                <i class="fa-solid fa-bars menu-icon menu-icon--open"> <span class="header__menu-text">MENU</span></i>
+                <i class="fa-solid fa-xmark menu-icon menu-icon--close"></i>
+            </label>
+            <!-- კლიკზე გამოსაჩენი მენიუ  -->
+            <aside class="header__aside">
+                <div class="header__aside-search">
+                    <div class="search-box">
+                        <i class="search-box__icon fas fa-search"></i>
+                        <input class="search-box__input" type="text" placeholder="Search..." />
+                    </div>
+                </div>
 
+                <nav class="header__aside-navigation navigation">
+                    <h6 class="navigation__title">Menu</h6>
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a href="./index.html" class="navigation__link">
+                                <i class="navigation__icon fa-solid fa-house-user"></i>
+                                <span class="navigation__text">Home</span>
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="./transactions.html" class="navigation__link navigation__link--active">
+                                <i class="navigation__icon fa-solid fa-money-bill-transfer"></i>
+                                <span class="navigation__text">Transactions</span>
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">
+                                <i class="navigation__icon fa-solid fa-credit-card"></i>
+                                <span class="navigation__text">Payments</span>
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">
+                                <i class="navigation__icon fa-solid fa-piggy-bank"></i>
+                                <span class="navigation__text">Deposits</span>
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">
+                                <i class="navigation__icon fa-solid fa-money-check-dollar"></i>
+                                <span class="navigation__text">Credits</span>
+                            </a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">
+                                <i class="navigation__icon fa-solid fa-tags"></i>
+                                <span class="navigation__text">Offers</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header__aside-controls">
+                    <div class="notification">
+                        <button class="notification__button" aria-label="Notifications">
+                            <i class="notification__icon fa-solid fa-bell"></i>
+                        </button>
+                        <span class="notification__text">Notification</span>
+                    </div>
+
+                    <div class="theme-toggle">
+                        <button class="theme-toggle__button theme-toggle__button--active" data-mode="light">
+                            <i class="theme-toggle__icon fas fa-sun"></i>
+                            <span class="theme-toggle__text">Light</span>
+                        </button>
+                        <button class="theme-toggle__button" data-mode="dark">
+                            <i class="theme-toggle__icon fas fa-moon"></i>
+                            <span class="theme-toggle__text">Dark</span>
+                        </button>
+                    </div>
+
+                    <div class="logout">
+                        <button class="logout__button">
+                            <i class="logout__icon fa-solid fa-right-from-bracket"></i>
+                        </button>
+                        <span class="logout__text">LogOut</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- logo  -->
+            <a href="./index.html" class="header__logo">
+                <img src="./images/logo.svg" alt="bank logo">
+            </a>
+            <!-- actions  -->
+            <div class="header__actions">
+                <button class="header__action-button" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="header__action-button" aria-label="Notifications">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+                <button class="header__action-button" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <div class="header__profile">
+                    <button class="header__profile-button" aria-label="User Profile">T</button>
+                </div>
+                <button class="header__logout-button">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- transactions -->
+    <main class="transactions-history">
+        <h2>Transactions History</h2>
+        <!-- Date -->
+        <section class="transactions-header">
+            <button class="date-range-single">
+                Sep 9, 2025 - Sep 15, 2025
+                <span class="calendar-icon">📅</span>
+            </button>
+            <div class="export-download">
+                <button class="btn-export">Export CSV</button>
+                <button class="btn-download">Download Invoices</button>
+            </div>
+        </section>
+        <!-- Summary cards -->
+        <div class="transactions-summary">
+            <div class="summary-card">
+                <div class="summary-icon">💰</div>
+                <div>
+                    <div class="summary-label">Balances</div>
+                    <div class="summary-amount">$78,987.00</div>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon">🏦</div>
+                <div>
+                    <div class="summary-label">Savings</div>
+                    <div class="summary-amount">$23,000.00</div>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon">⬇️</div>
+                <div>
+                    <div class="summary-label">Incomes</div>
+                    <div class="summary-amount">$28,670.00</div>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon">⬆️</div>
+                <div>
+                    <div class="summary-label">Expenses</div>
+                    <div class="summary-amount">$3,456.00</div>
+                </div>
+            </div>
+        </div>
+        <!-- Transactions filters -->
+        <div class="transactions-filters">
+            <button class="ellipsis-btn" aria-label="More actions">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 128 512"
+                    fill="currentColor">
+                    <path
+                        d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360z
+             M64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200z
+             M64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z" />
+                </svg>
+            </button>
+
+
+            <div class="filter-tabs">
+                <button class="tab active">All</button>
+                <button class="tab">Savings</button>
+                <button class="tab">Income</button>
+                <button class="tab">Expenses</button>
+            </div>
+
+            <div class="filter-status">
+                <label for="status-select">Status:</label>
+                <select id="status-select">
+                    <option>All</option>
+                    <option>Pending</option>
+                    <option>Completed</option>
+                    <option>Cancelled</option>
+                </select>
+            </div>
+        </div>
+        <!-- Transactions table -->
+        <table class="transactions-table">
+            <thead>
+                <tr>
+                    <th>Ref ID</th>
+                    <th>Transaction Date</th>
+                    <th>From</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>456789356</td>
+                    <td>Jul 17, 2025, 11:45 AM</td>
+                    <td><img src="./images/nike.jpg" alt="Nike Store" class="avatar" /> Nike Store</td>
+                    <td>Purchase</td>
+                    <td class="negative">-$28.60</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789357</td>
+                    <td>Jul 17, 2025, 9:21 AM</td>
+                    <td><img src="./images/mom.jpg" alt="Mom" class="avatar" /> Mom</td>
+                    <td>Replenishment</td>
+                    <td class="positive">+$100.60</td>
+                    <td><span class="status completed">Completed</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789358</td>
+                    <td>Jul 16, 2025, 1:12 AM</td>
+                    <td><img src="./images/auchan.svg" alt="Auchan" class="avatar" /> Auchan</td>
+                    <td>Purchase</td>
+                    <td class="negative">-$18.13</td>
+                    <td><span class="status cancelled">Cancelled</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789359</td>
+                    <td>Jul 16, 2025, 10:44 AM</td>
+                    <td><img src="./images/total.webp" alt="Total" class="avatar" /> Total</td>
+                    <td>Purchase</td>
+                    <td class="negative">-$15.13</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789356</td>
+                    <td>Jul 17, 2025, 11:45 AM</td>
+                    <td><img src="./images/nike.jpg" alt="Nike Store" class="avatar" /> Nike Store</td>
+                    <td>Purchase</td>
+                    <td class="negative">-$28.60</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789357</td>
+                    <td>Jul 17, 2025, 9:21 AM</td>
+                    <td><img src="./images/mom.jpg" alt="Mom" class="avatar" /> Mom</td>
+                    <td>Replenishment</td>
+                    <td class="positive">+$100.60</td>
+                    <td><span class="status completed">Completed</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789358</td>
+                    <td>Jul 16, 2025, 1:12 AM</td>
+                    <td><img src="./images/auchan.svg" alt="Auchan" class="avatar" /> Auchan</td>
+                    <td>Purchase</td>
+                    <td class="negative">-$18.13</td>
+                    <td><span class="status cancelled">Cancelled</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789359</td>
+                    <td>Jul 16, 2025, 10:44 AM</td>
+                    <td><img src="./images/total.webp" alt="Total" class="avatar" /> Total</td>
+                    <td>Purchase</td>
+                    <td class="negative">-$15.13</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789356</td>
+                    <td>Jul 17, 2025, 11:45 AM</td>
+                    <td><img src="./images/nike.jpg" alt="Nike Store" class="avatar" /> Nike Store</td>
+                    <td>Purchase</td>
+                    <td class="negative">-$28.60</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789357</td>
+                    <td>Jul 17, 2025, 9:21 AM</td>
+                    <td><img src="./images/mom.jpg" alt="Mom" class="avatar" /> Mom</td>
+                    <td>Replenishment</td>
+                    <td class="positive">+$100.60</td>
+                    <td><span class="status completed">Completed</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789358</td>
+                    <td>Jul 16, 2025, 1:12 AM</td>
+                    <td><img src="./images/auchan.svg" alt="Auchan" class="avatar" /> Auchan</td>
+                    <td>Purchase</td>
+                    <td class="negative">-$18.13</td>
+                    <td><span class="status cancelled">Cancelled</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789359</td>
+                    <td>Jul 16, 2025, 10:44 AM</td>
+                    <td><img src="./images/total.webp" alt="Total" class="avatar" /> Total</td>
+                    <td>Purchase</td>
+                    <td class="negative">-$15.13</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789356</td>
+                    <td>Jul 17, 2025, 11:45 AM</td>
+                    <td><img src="./images/nike.jpg" alt="Nike Store" class="avatar" /> Nike Store</td>
+                    <td>Purchase</td>
+                    <td class="negative">-$28.60</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789357</td>
+                    <td>Jul 17, 2025, 9:21 AM</td>
+                    <td><img src="./images/mom.jpg" alt="Mom" class="avatar" /> Mom</td>
+                    <td>Replenishment</td>
+                    <td class="positive">+$100.60</td>
+                    <td><span class="status completed">Completed</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789358</td>
+                    <td>Jul 16, 2025, 1:12 AM</td>
+                    <td><img src="./images/auchan.svg" alt="Auchan" class="avatar" /> Auchan</td>
+                    <td>Purchase</td>
+                    <td class="negative">-$18.13</td>
+                    <td><span class="status cancelled">Cancelled</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789359</td>
+                    <td>Jul 16, 2025, 10:44 AM</td>
+                    <td><img src="./images/total.webp" alt="Total" class="avatar" /> Total</td>
+                    <td>Purchase</td>
+                    <td class="negative">-$15.13</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789356</td>
+                    <td>Jul 17, 2025, 11:45 AM</td>
+                    <td><img src="./images/nike.jpg" alt="Nike Store" class="avatar" /> Nike Store</td>
+                    <td>Purchase</td>
+                    <td class="negative">-$28.60</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789357</td>
+                    <td>Jul 17, 2025, 9:21 AM</td>
+                    <td><img src="./images/mom.jpg" alt="Mom" class="avatar" /> Mom</td>
+                    <td>Replenishment</td>
+                    <td class="positive">+$100.60</td>
+                    <td><span class="status completed">Completed</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789358</td>
+                    <td>Jul 16, 2025, 1:12 AM</td>
+                    <td><img src="./images/auchan.svg" alt="Auchan" class="avatar" /> Auchan</td>
+                    <td>Purchase</td>
+                    <td class="negative">-$18.13</td>
+                    <td><span class="status cancelled">Cancelled</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+                <tr>
+                    <td>456789359</td>
+                    <td>Jul 16, 2025, 10:44 AM</td>
+                    <td><img src="./images/total.webp" alt="Total" class="avatar" /> Total</td>
+                    <td>Purchase</td>
+                    <td class="negative">-$15.13</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td><button class="btn-actions">•••</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- transactions for mobile -->
+        <div class="transactions__mobile">
+            <div class="transactions__mobile-row row">
+                <p class="row__date">Jul 17, 2025, 11:45 AM</p>
+                <div class="row__footer">
+                    <div class="row__avatar-box">
+                        <img src="./images/nike.jpg" alt="Nike Store" class="row__avatar" />
+                        <span>Nike Store</span>
+                    </div>
+                    <span class="negative">-$28.60</span>
+                </div>
+            </div>
+            <div class="transactions__mobile-row row">
+                <p class="row__date">Jul 17, 2025, 9:21 AM</p>
+                <div class="row__footer">
+                    <div class="row__avatar-box">
+                        <img src="./images/mom.jpg" alt="Mom" class="row__avatar" />
+                        <span>Mom</span>
+                    </div>
+                    <span class="positive">+$100.60</span>
+                </div>
+            </div>
+            <div class="transactions__mobile-row row">
+                <p class="row__date">Jul 16, 2025, 1:12 AM</p>
+                <div class="row__footer">
+                    <div class="row__avatar-box">
+                        <img src="./images/auchan.svg" alt="Auchan" class="row__avatar" />
+                        <span>Auchan</span>
+                    </div>
+                    <span class="negative">-$18.13</span>
+                </div>
+            </div>
+            <div class="transactions__mobile-row row">
+                <p class="row__date">Jul 16, 2025, 10:44 AM</p>
+                <div class="row__footer">
+                    <div class="row__avatar-box">
+                        <img src="./images/total.webp" alt="Total" class="row__avatar" />
+                        <span>Total</span>
+                    </div>
+                    <span class="negative">-$18.13</span>
+                </div>
+            </div>
+            <div class="transactions__mobile-row row">
+                <p class="row__date">Jul 17, 2025, 11:45 AM</p>
+                <div class="row__footer">
+                    <div class="row__avatar-box">
+                        <img src="./images/nike.jpg" alt="Nike Store" class="row__avatar" />
+                        <span>Nike Store</span>
+                    </div>
+                    <span class="negative">-$28.60</span>
+                </div>
+            </div>
+            <div class="transactions__mobile-row row">
+                <p class="row__date">Jul 17, 2025, 9:21 AM</p>
+                <div class="row__footer">
+                    <div class="row__avatar-box">
+                        <img src="./images/mom.jpg" alt="Mom" class="row__avatar" />
+                        <span>Mom</span>
+                    </div>
+                    <span class="positive">+$100.60</span>
+                </div>
+            </div>
+            <div class="transactions__mobile-row row">
+                <p class="row__date">Jul 16, 2025, 1:12 AM</p>
+                <div class="row__footer">
+                    <div class="row__avatar-box">
+                        <img src="./images/auchan.svg" alt="Auchan" class="row__avatar" />
+                        <span>Auchan</span>
+                    </div>
+                    <span class="negative">-$18.13</span>
+                </div>
+            </div>
+            <div class="transactions__mobile-row row">
+                <p class="row__date">Jul 16, 2025, 10:44 AM</p>
+                <div class="row__footer">
+                    <div class="row__avatar-box">
+                        <img src="./images/total.webp" alt="Total" class="row__avatar" />
+                        <span>Total</span>
+                    </div>
+                    <span class="negative">-$18.13</span>
+                </div>
+            </div>
+            <div class="transactions__mobile-row row">
+                <p class="row__date">Jul 17, 2025, 11:45 AM</p>
+                <div class="row__footer">
+                    <div class="row__avatar-box">
+                        <img src="./images/nike.jpg" alt="Nike Store" class="row__avatar" />
+                        <span>Nike Store</span>
+                    </div>
+                    <span class="negative">-$28.60</span>
+                </div>
+            </div>
+            <div class="transactions__mobile-row row">
+                <p class="row__date">Jul 17, 2025, 9:21 AM</p>
+                <div class="row__footer">
+                    <div class="row__avatar-box">
+                        <img src="./images/mom.jpg" alt="Mom" class="row__avatar" />
+                        <span>Mom</span>
+                    </div>
+                    <span class="positive">+$100.60</span>
+                </div>
+            </div>
+            <div class="transactions__mobile-row row">
+                <p class="row__date">Jul 16, 2025, 1:12 AM</p>
+                <div class="row__footer">
+                    <div class="row__avatar-box">
+                        <img src="./images/auchan.svg" alt="Auchan" class="row__avatar" />
+                        <span>Auchan</span>
+                    </div>
+                    <span class="negative">-$18.13</span>
+                </div>
+            </div>
+            <div class="transactions__mobile-row row">
+                <p class="row__date">Jul 16, 2025, 10:44 AM</p>
+                <div class="row__footer">
+                    <div class="row__avatar-box">
+                        <img src="./images/total.webp" alt="Total" class="row__avatar" />
+                        <span>Total</span>
+                    </div>
+                    <span class="negative">-$18.13</span>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
